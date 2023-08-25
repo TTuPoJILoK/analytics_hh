@@ -1,0 +1,39 @@
+version: '3.5'
+
+services:
+  app_db:
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_USER=admin
+    image: postgres:14.3-alpine
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  app:
+    build: ./labor_analytics
+    container_name: my_app
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./labor_analytics:/labor_analytics
+      - static_data:/labor_analytics/static
+    depends_on:
+      - app_db
+    command: sh -c "sleep 5"
+
+  nginx:
+    image: nginx:1.25-alpine
+    depends_on:
+      - app
+    ports:
+      - "80:80"
+    # volumes:
+    #   - static_data:/var/www/html/static
+    #   - ./nginx-conf.d:/etc/nginx/conf.d 
+
+volumes:
+  postgres-data:
+  static_data:

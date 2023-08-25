@@ -1,0 +1,3 @@
+[sqlalchemy.dialects]
+access.pyodbc = sqlalchemy_access.pyodbc:AccessDialect_pyodbc
+
