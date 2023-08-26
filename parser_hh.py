@@ -254,7 +254,6 @@ cur.execute( '''
 ''')
             
 max_id = cur.fetchall()[0][0] + 1
-max_id
 
 jobs_res['column_not_exist_in_db'] = range(max_id, max_id+len(jobs_res))
 

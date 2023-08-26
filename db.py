@@ -11,6 +11,7 @@ from sqlalchemy.orm import DeclarativeBase, Session
 from sqlalchemy.orm import Mapped
 from sqlalchemy.orm import mapped_column
 from sqlalchemy.orm import relationship
+from sqlalchemy_utils import database_exists, create_database
 
 
 class Base(DeclarativeBase):
@@ -49,7 +50,9 @@ class Skills(Base):
 
 
 engine = create_engine("postgresql://admin:admin@localhost:5432/analytics_hh")
-
+if not database_exists(engine.url):
+    create_database(engine.url)
+    
 Base.metadata.create_all(engine)
 
 
