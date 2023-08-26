@@ -12,7 +12,7 @@ conn = psycopg2.connect(
         )
 cur = conn.cursor()
 
-q = "select id, skill from vacancies"
+q = "select id_vac, skill from vacancies"
 
 cur.execute(q)
 skills = pd.DataFrame(cur.fetchall())
@@ -22,11 +22,11 @@ conn.commit()
 cur.close()
 
 
-gr = skills.groupby('skill')['id'].count().sort_values(ascending=False)
+gr = skills.groupby('skill')['id_vac'].count().sort_values(ascending=False)
 skills_group = pd.DataFrame(gr)
 skills_group = skills_group.reset_index()
 skills_group['skill_lower'] = skills_group['skill'].apply(str.lower)
-skills_group = skills_group.groupby(['skill_lower']).sum().sort_values('id', ascending=False).reset_index()
+skills_group = skills_group.groupby(['skill_lower']).sum().sort_values('id_vac', ascending=False).reset_index()
 
 keywords_programming = [
 'sql', 'python', 'r', 'c', 'c#', 'javascript', 'js',  'java', 'scala', 'sas', 'matlab', 
@@ -51,7 +51,7 @@ keywords_analyst_tools = [
 'microstrategy',  'cognos', 'dax',  'esquisse', 'rshiny', 'mlr',
 'docker', 'linux', 'jira', 'graphql', 'sap', 'node', 'asp.net', 'unix',
 'jquery', 'gitlab', 'splunk', 'bitbucket', 'qlik', 'terminal', 'atlassian', 'unix/linux',
-'linux/unix', 'ubuntu', 'nuix', 'datarobot', 'microsoft', 'slack',
+'linux/unix', 'ubuntu', 'nuix', 'datarobot', 'microsoft', 'slack', 'bpmn', 'uml'
 ]
 
 keywords_db = [
@@ -83,7 +83,7 @@ skills_group = skills_group.loc[skills_group['skill_lower'] != '0']
 cur = conn.cursor()
 
 cur.execute( '''
-    DELETE FROM skills;
+    DELETE FROM skill_types;
 ''')      
 
 conn.commit()
@@ -91,4 +91,4 @@ cur.close()
 conn.close()
 
 engine = create_engine("postgresql://admin:admin@localhost:5432/analytics_hh")
-skills_group.to_sql("skills", engine, if_exists="append", index=False)
+skills_group.to_sql("skill_types", engine, if_exists="append", index=False)

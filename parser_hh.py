@@ -86,8 +86,8 @@ def test_include(vac_id):
 
 
 jsobjs = []
-day_from = datetime.now() - timedelta(days=5)
-day_to = datetime.now() - timedelta(days=5)
+day_from = datetime.now() - timedelta(days=1)
+day_to = datetime.now() - timedelta(days=1)
 
 
 #########################################
@@ -95,7 +95,7 @@ print('start')
 #########################################
 
 
-for _ in range(19):
+for _ in range(3):
     day_to += timedelta(days=1/4)
     for page in range(0, 20):
         
@@ -230,11 +230,11 @@ cur.close()
 conn.close()
 
 jobs_res['skill_lower'] = jobs_res['skill'].apply(str.lower)
-
-jobs_res = jobs_res.merge(skills, on='skill_lower')
-jobs_res = jobs_res.rename(columns={'id': 'id_vac', 'type_x': 'type_vac', 'type_y': 'skill_type'})
-jobs_res = jobs_res = jobs_res[['id_vac', 'published_at', 'name', 'city', 'salary', 'employer', 'type', 'experience', 
+jobs_res = jobs_res.merge(skills, on='skill_lower', how='left')
+jobs_res = jobs_res.rename(columns={'id': 'id_vac', 'type': 'type_vac'})
+jobs_res = jobs_res[['id_vac', 'published_at', 'name', 'city', 'salary', 'employer', 'type_vac', 'experience', 
                      'employment', 'role', 'description', 'skill', 'grade', 'skill_lower', 'skill_type']]
+jobs_res['skill_type'] = jobs_res['skill_type'].fillna('0')
 
 ################
 print('jobs all done')

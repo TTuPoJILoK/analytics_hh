@@ -13,16 +13,16 @@ services:
       - postgres-data:/var/lib/postgresql/data
 
   app:
-    build: ./labor_analytics
+    build: .
     container_name: my_app
     ports:
       - "8501:8501"
-    volumes:
-      - ./labor_analytics:/labor_analytics
-      - static_data:/labor_analytics/static
+    # volumes:
+    #   - .:/labor_analytics
+    #   - static_data:/labor_analytics/static
     depends_on:
       - app_db
-    command: sh -c "sleep 5"
+    #command: sh -c "sleep 5"
 
   nginx:
     image: nginx:1.25-alpine
@@ -36,4 +36,4 @@ services:
 
 volumes:
   postgres-data:
-  static_data:
+  # static_data:
