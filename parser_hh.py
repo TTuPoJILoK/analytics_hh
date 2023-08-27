@@ -86,8 +86,9 @@ def test_include(vac_id):
 
 
 jsobjs = []
-day_from = datetime.now() - timedelta(days=1)
-day_to = datetime.now() - timedelta(days=1)
+num_parsing_days = 1
+day_from = datetime.now() - timedelta(days=num_parsing_days)
+day_to = datetime.now() - timedelta(days=num_parsing_days)
 
 
 #########################################
@@ -95,7 +96,8 @@ print('start')
 #########################################
 
 
-for _ in range(3):
+
+for _ in range(num_parsing_days * 4 - 1):
     day_to += timedelta(days=1/4)
     for page in range(0, 20):
         
