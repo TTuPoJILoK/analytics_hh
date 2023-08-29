@@ -1,0 +1,39 @@
+[2023-08-28T15:42:34.923+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_parser.parsing manual__2023-08-28T15:42:32.289653+00:00 [queued]>
+[2023-08-28T15:42:34.932+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_parser.parsing manual__2023-08-28T15:42:32.289653+00:00 [queued]>
+[2023-08-28T15:42:34.934+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 3
+[2023-08-28T15:42:34.944+0000] {taskinstance.py:1382} INFO - Executing <Task(_PythonDecoratedOperator): parsing> on 2023-08-28 15:42:32.289653+00:00
+[2023-08-28T15:42:34.953+0000] {standard_task_runner.py:57} INFO - Started process 231 to run task
+[2023-08-28T15:42:34.958+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'dag_parser', 'parsing', 'manual__2023-08-28T15:42:32.289653+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/dag_parser.py', '--cfg-path', '/tmp/tmpklg8jbn1']
+[2023-08-28T15:42:34.961+0000] {standard_task_runner.py:85} INFO - Job 12: Subtask parsing
+[2023-08-28T15:42:35.778+0000] {task_command.py:415} INFO - Running <TaskInstance: dag_parser.parsing manual__2023-08-28T15:42:32.289653+00:00 [running]> on host 996d487147a3
+[2023-08-28T15:42:35.845+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='oleg' AIRFLOW_CTX_DAG_ID='dag_parser' AIRFLOW_CTX_TASK_ID='parsing' AIRFLOW_CTX_EXECUTION_DATE='2023-08-28T15:42:32.289653+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-08-28T15:42:32.289653+00:00'
+[2023-08-28T15:42:52.554+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 221, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag_parser.py", line 255, in parsing
+    parser()
+  File "/opt/airflow/dags/dag_parser.py", line 180, in parser
+    jobs['drop'] = jobs['id'].apply(test_include)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/series.py", line 4630, in apply
+    return SeriesApply(self, func, convert_dtype, args, kwargs).apply()
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/apply.py", line 1025, in apply
+    return self.apply_standard()
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/apply.py", line 1076, in apply_standard
+    mapped = lib.map_infer(
+  File "pandas/_libs/lib.pyx", line 2834, in pandas._libs.lib.map_infer
+  File "/opt/airflow/dags/dag_parser.py", line 73, in test_include
+    conn = psycopg2.connect(
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "app_db" to address: Name or service not known
+
+[2023-08-28T15:42:52.587+0000] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=dag_parser, task_id=parsing, execution_date=20230828T154232, start_date=20230828T154234, end_date=20230828T154252
+[2023-08-28T15:42:52.609+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 12 for task parsing (could not translate host name "app_db" to address: Name or service not known
+; 231)
+[2023-08-28T15:42:52.680+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-08-28T15:42:52.723+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check

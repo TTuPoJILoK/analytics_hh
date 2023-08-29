@@ -1,0 +1,36 @@
+[2023-08-29T04:46:23.493+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_parser.parsing manual__2023-08-29T04:46:20.772096+00:00 [queued]>
+[2023-08-29T04:46:23.527+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_parser.parsing manual__2023-08-29T04:46:20.772096+00:00 [queued]>
+[2023-08-29T04:46:23.530+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 3
+[2023-08-29T04:46:24.270+0000] {taskinstance.py:1382} INFO - Executing <Task(_PythonDecoratedOperator): parsing> on 2023-08-29 04:46:20.772096+00:00
+[2023-08-29T04:46:24.295+0000] {standard_task_runner.py:57} INFO - Started process 664 to run task
+[2023-08-29T04:46:24.299+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'dag_parser', 'parsing', 'manual__2023-08-29T04:46:20.772096+00:00', '--job-id', '28', '--raw', '--subdir', 'DAGS_FOLDER/dag_parser.py', '--cfg-path', '/tmp/tmplq_b6fxi']
+[2023-08-29T04:46:24.307+0000] {standard_task_runner.py:85} INFO - Job 28: Subtask parsing
+[2023-08-29T04:46:24.529+0000] {task_command.py:415} INFO - Running <TaskInstance: dag_parser.parsing manual__2023-08-29T04:46:20.772096+00:00 [running]> on host 69230ba3f444
+[2023-08-29T04:46:24.680+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='oleg' AIRFLOW_CTX_DAG_ID='dag_parser' AIRFLOW_CTX_TASK_ID='parsing' AIRFLOW_CTX_EXECUTION_DATE='2023-08-29T04:46:20.772096+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-08-29T04:46:20.772096+00:00'
+[2023-08-29T04:46:44.620+0000] {local_task_job_runner.py:294} WARNING - State of this instance has been externally set to None. Terminating instance.
+[2023-08-29T04:46:44.636+0000] {process_utils.py:131} INFO - Sending 15 to group 664. PIDs of all processes in the group: [664]
+[2023-08-29T04:46:44.637+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 664
+[2023-08-29T04:46:44.644+0000] {taskinstance.py:1632} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-08-29T04:46:44.736+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 221, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag_parser.py", line 275, in parsing
+    parser()
+  File "/opt/airflow/dags/dag_parser.py", line 125, in parser
+    time.sleep(3)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1634, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2023-08-29T04:46:44.755+0000] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=dag_parser, task_id=parsing, execution_date=20230829T044620, start_date=20230829T044623, end_date=20230829T044644
+[2023-08-29T04:46:44.814+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 28 for task parsing ((psycopg2.errors.ForeignKeyViolation) insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(dag_parser, parsing, manual__2023-08-29T04:46:20.772096+00:00, -1) is not present in table "task_instance".
+
+[SQL: INSERT INTO task_fail (task_id, dag_id, run_id, map_index, start_date, end_date, duration) VALUES (%(task_id)s, %(dag_id)s, %(run_id)s, %(map_index)s, %(start_date)s, %(end_date)s, %(duration)s) RETURNING task_fail.id]
+[parameters: {'task_id': 'parsing', 'dag_id': 'dag_parser', 'run_id': 'manual__2023-08-29T04:46:20.772096+00:00', 'map_index': -1, 'start_date': datetime.datetime(2023, 8, 29, 4, 46, 23, 512180, tzinfo=Timezone('UTC')), 'end_date': datetime.datetime(2023, 8, 29, 4, 46, 44, 752717, tzinfo=Timezone('UTC')), 'duration': 21}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj); 664)
+[2023-08-29T04:46:44.896+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=664, status='terminated', exitcode=1, started='04:46:23') (664) terminated with exit code 1
