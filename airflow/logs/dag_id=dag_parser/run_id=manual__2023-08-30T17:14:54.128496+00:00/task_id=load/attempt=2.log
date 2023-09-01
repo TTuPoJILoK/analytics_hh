@@ -1,0 +1,24 @@
+[2023-08-30T17:28:54.139+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_parser.load manual__2023-08-30T17:14:54.128496+00:00 [queued]>
+[2023-08-30T17:28:54.152+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_parser.load manual__2023-08-30T17:14:54.128496+00:00 [queued]>
+[2023-08-30T17:28:54.154+0000] {taskinstance.py:1361} INFO - Starting attempt 2 of 3
+[2023-08-30T17:28:54.164+0000] {taskinstance.py:1382} INFO - Executing <Task(_PythonDecoratedOperator): load> on 2023-08-30 17:14:54.128496+00:00
+[2023-08-30T17:28:54.179+0000] {standard_task_runner.py:57} INFO - Started process 382 to run task
+[2023-08-30T17:28:54.183+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'dag_parser', 'load', 'manual__2023-08-30T17:14:54.128496+00:00', '--job-id', '77', '--raw', '--subdir', 'DAGS_FOLDER/dag_parser.py', '--cfg-path', '/tmp/tmpyzy9rmzm']
+[2023-08-30T17:28:54.185+0000] {standard_task_runner.py:85} INFO - Job 77: Subtask load
+[2023-08-30T17:28:54.233+0000] {task_command.py:415} INFO - Running <TaskInstance: dag_parser.load manual__2023-08-30T17:14:54.128496+00:00 [running]> on host a0407cf7b722
+[2023-08-30T17:28:54.317+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='oleg' AIRFLOW_CTX_DAG_ID='dag_parser' AIRFLOW_CTX_TASK_ID='load' AIRFLOW_CTX_EXECUTION_DATE='2023-08-30T17:14:54.128496+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-08-30T17:14:54.128496+00:00'
+[2023-08-30T17:28:54.321+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 221, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag_parser.py", line 400, in load
+    jobs_res.to_sql('vacancies', engine, if_exists='append', index=False)
+AttributeError: 'NoneType' object has no attribute 'to_sql'
+[2023-08-30T17:28:54.333+0000] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=dag_parser, task_id=load, execution_date=20230830T171454, start_date=20230830T172854, end_date=20230830T172854
+[2023-08-30T17:28:54.343+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 77 for task load ('NoneType' object has no attribute 'to_sql'; 382)
+[2023-08-30T17:28:54.360+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-08-30T17:28:54.387+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check
