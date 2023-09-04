@@ -17,7 +17,7 @@ from sqlalchemy_utils import database_exists, create_database
 class Base(DeclarativeBase):
     pass
 
-
+# Создание таблиц и базы данных на сервере
 class Vacancy(Base):
     __tablename__ = "vacancies"
 

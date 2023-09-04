@@ -7,6 +7,7 @@ import numpy as np
 from plotly.colors import n_colors
 
 
+# Навыки использующиеся в анализе
 keywords_skills = {
     'airflow': 'Airflow', 'alteryx': 'Alteryx', 'asp.net': 'ASP.NET', 'atlassian': 'Atlassian', 
     'ms excel': 'Excel', 'power_bi': 'Power BI', 'tableau': 'Tableau', 'srss': 'SRSS', 'ms word': 'Word', 
@@ -27,8 +28,9 @@ keywords_skills = {
     'pascal':'Pascal', 'mongo' : 'Mongo', 'pl/sql' : 'PL/SQL','sass' :'Sass', 'vb.net' : 'VB.NET','mssql' : 'MSSQL',
 }
 
+# Выгружаем данные
 conn = psycopg2.connect(
-    host="app_db", #app_db
+    host="app_db", 
     port="5432",
     database="analytics_hh",
     user="admin",
@@ -64,6 +66,7 @@ st.set_page_config(page_title='Analytics',
 
 st.header('Анализ рынка вакансий аналитиков на HeadHunter')
 
+########### Фильтры ##############
 roles = list(vacs['role'].unique())
 roles.sort()
 roles.insert(0, 'Все вакансии')
@@ -125,9 +128,9 @@ selection = vacs2.query(
 )
 
 try:
+    # Строим KPI
     num_vacs = selection['id_vac'].nunique()
     avg_salary = round(selection[selection['salary'] != 0]['salary'].mean())
-
 
     left_coloumn, middle_column, right_column = st.columns(3)
 
@@ -145,6 +148,7 @@ try:
 
     st.markdown('---')
 
+    # Названия графиков
     left_coloumn, right_column = st.columns(2)
 
     with left_coloumn:
@@ -152,6 +156,7 @@ try:
     with right_column:
         st.subheader('Самые большие зарплаты')
 
+    # Строим фильтры для графиков
     skill_type = vacs.loc[vacs['skill_type'] != '0']['skill_type'].unique().tolist()
     skill_type.sort()
     skill_type.insert(0, 'Все')
@@ -180,6 +185,7 @@ try:
         if "Любая" in employment_selection:
             employment_selection = employment_types
 
+    # Строим график для навыков
     if num_results == 'Топ 10':
         colormap = n_colors('rgb(250, 235, 215)', 'rgb(189, 147, 255)', 10, colortype = 'rgb')
         mask = selection['skill_type'].isin(skill_selection)
@@ -230,7 +236,7 @@ try:
     else:
         group_grade = selection_salary[selection_salary['salary'] != 0].groupby(by=['grade'], as_index=False)['salary'].mean().sort_values(by='salary', ascending=False)[:20]
 
-
+    #  График для зарплат
     bar_chart = px.bar(group_grade, 
                     x='salary',
                     y='grade',

@@ -1,0 +1,510 @@
+[2023-09-04T01:46:52.708+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_parser.transform manual__2023-09-04T01:46:26.683803+00:00 [queued]>
+[2023-09-04T01:46:52.715+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_parser.transform manual__2023-09-04T01:46:26.683803+00:00 [queued]>
+[2023-09-04T01:46:52.717+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 3
+[2023-09-04T01:46:52.725+0000] {taskinstance.py:1382} INFO - Executing <Task(_PythonDecoratedOperator): transform> on 2023-09-04 01:46:26.683803+00:00
+[2023-09-04T01:46:52.761+0000] {standard_task_runner.py:57} INFO - Started process 73 to run task
+[2023-09-04T01:46:52.772+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'dag_parser', 'transform', 'manual__2023-09-04T01:46:26.683803+00:00', '--job-id', '191', '--raw', '--subdir', 'DAGS_FOLDER/dag_parser.py', '--cfg-path', '/tmp/tmp0_h8_0lr']
+[2023-09-04T01:46:52.774+0000] {standard_task_runner.py:85} INFO - Job 191: Subtask transform
+[2023-09-04T01:46:52.853+0000] {task_command.py:415} INFO - Running <TaskInstance: dag_parser.transform manual__2023-09-04T01:46:26.683803+00:00 [running]> on host 54149ae8dbd1
+[2023-09-04T01:46:53.062+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='oleg' AIRFLOW_CTX_DAG_ID='dag_parser' AIRFLOW_CTX_TASK_ID='transform' AIRFLOW_CTX_EXECUTION_DATE='2023-09-04T01:46:26.683803+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-09-04T01:46:26.683803+00:00'
+[2023-09-04T01:46:53.263+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:53.282+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/providers/common/sql/hooks/sql.py:219: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  return psql.read_sql(sql, con=conn, params=parameters, **kwargs)
+
+[2023-09-04T01:46:53.449+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:53.497+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:53.543+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:53.600+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:53.645+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:53.691+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:53.736+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:53.780+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:53.828+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:53.878+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:53.940+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:53.987+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:54.034+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:54.080+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:54.125+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:54.172+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:54.221+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:54.267+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:54.314+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:54.360+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:54.405+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:54.452+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:54.496+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:54.540+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:54.593+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:54.640+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:54.684+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:54.729+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:54.776+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:54.820+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:54.868+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:54.917+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:54.964+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:55.012+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:55.060+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:55.104+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:55.150+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:55.197+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:55.247+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:55.304+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:55.351+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:55.397+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:55.444+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:55.490+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:55.537+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:55.582+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:55.629+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:55.677+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:55.723+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:55.772+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:55.822+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:55.868+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:55.915+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:55.964+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:56.016+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:56.065+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:56.114+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:56.164+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:56.213+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:56.261+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:56.312+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:56.362+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:56.410+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:56.458+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:56.508+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:56.554+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:56.602+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:56.650+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:56.696+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:56.747+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:56.798+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:56.850+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:56.922+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:56.993+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:57.042+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:57.091+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:57.139+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:57.191+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:57.247+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:57.319+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:57.404+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:57.573+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:57.640+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:57.696+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:57.779+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:57.858+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:57.934+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:57.990+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:58.041+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:58.094+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:58.143+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:58.199+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:58.260+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:58.316+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:58.367+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:58.416+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:58.467+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:58.515+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:58.567+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:58.618+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:58.668+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:58.720+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:58.774+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:58.823+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:58.873+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:58.937+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:58.994+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:59.055+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:59.107+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:59.158+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:59.211+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:59.262+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:59.329+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:59.403+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:59.464+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:59.518+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:59.570+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:59.619+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:59.669+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:59.720+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:59.770+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:59.822+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:59.872+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:46:59.948+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:00.038+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:00.132+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:00.201+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:00.301+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:00.376+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:00.514+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:00.585+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:00.665+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:00.731+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:00.797+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:00.872+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:00.945+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:01.005+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:01.061+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:01.124+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:01.222+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:01.276+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:01.329+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:01.381+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:01.433+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:01.521+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:01.575+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:01.626+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:01.685+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:01.749+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:01.805+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:01.866+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:01.917+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:01.982+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:02.062+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:02.151+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:02.213+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:02.334+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:02.407+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:02.460+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:02.521+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:02.575+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:02.629+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:02.682+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:02.735+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:02.794+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:02.849+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:02.921+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:02.974+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:03.034+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:03.091+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:03.143+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:03.197+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:03.277+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:03.352+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:03.485+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:03.613+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:03.692+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:03.761+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:03.827+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:03.921+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:04.028+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:04.098+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:04.166+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:04.234+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:04.291+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:04.343+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:04.399+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:04.455+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:04.510+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:04.566+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:04.619+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:04.675+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:04.729+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:04.784+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:04.838+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:04.895+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:04.951+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:05.006+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:05.080+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:05.140+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:05.211+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:05.280+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:05.370+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:05.447+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:05.533+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:05.605+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:05.667+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:05.732+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:05.805+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:05.876+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:05.938+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:05.996+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:06.061+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:06.117+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:06.176+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:06.235+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:06.292+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:06.348+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:06.405+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:06.462+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:06.519+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:06.584+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:06.640+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:06.698+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:06.753+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:06.811+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:06.885+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:06.965+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:07.042+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:07.110+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:07.176+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:07.251+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:07.320+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:07.402+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:07.471+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:07.531+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:07.590+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:07.647+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:07.708+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:07.764+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:07.824+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:07.882+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:07.958+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:08.016+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:08.077+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:08.140+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:08.199+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:08.256+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:08.315+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:08.373+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:08.433+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:08.506+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:08.575+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:08.641+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:08.716+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:08.783+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:08.841+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:08.901+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:08.975+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:09.035+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:09.098+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:09.165+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:09.223+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:09.285+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:09.392+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:09.566+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:09.635+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:09.697+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:09.757+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:09.818+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:09.879+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:09.942+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:10.047+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:10.144+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:10.225+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:10.287+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:10.348+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:10.413+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:10.480+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:10.543+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:10.602+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:10.662+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:10.733+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:10.794+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:10.855+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:10.916+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:10.976+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:11.039+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:11.103+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:11.166+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:11.235+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:11.313+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:11.372+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:11.432+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:11.503+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:11.562+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:11.624+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:11.684+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:11.746+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:11.819+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:11.888+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:11.952+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:12.036+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:12.138+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:12.212+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:12.275+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:12.337+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:12.409+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:12.471+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:12.543+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:12.602+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:12.663+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:12.722+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:12.783+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:12.850+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:12.916+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:12.988+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:13.054+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:13.114+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:13.184+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:13.246+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:13.304+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:13.364+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:13.426+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:13.485+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:13.545+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:13.606+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:13.677+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:13.739+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:13.798+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:13.858+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:13.920+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:13.980+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:14.045+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:14.104+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:14.165+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:14.227+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:14.288+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:14.348+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:14.407+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:14.468+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:14.530+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:14.591+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:14.651+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:14.711+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:14.772+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:14.833+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:14.893+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:14.954+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:15.015+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:15.077+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:15.137+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:15.196+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:15.259+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:15.320+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:15.380+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:15.535+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:15.627+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:15.697+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:15.776+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:15.846+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:15.913+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:16.009+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:16.104+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:16.195+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:16.296+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:16.370+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:16.451+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:16.533+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:16.620+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:16.691+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:16.769+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:16.859+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:16.932+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:17.050+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:17.119+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:17.192+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:17.283+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:17.355+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:17.440+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:17.528+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:17.612+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:17.676+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:17.743+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:17.810+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:17.881+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:17.948+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:18.020+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:18.100+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:18.169+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:18.231+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:18.296+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:18.358+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:18.419+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:18.479+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:18.540+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:18.602+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:18.663+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:18.725+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:18.786+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:18.847+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:18.905+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:18.965+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:19.026+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:19.087+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:19.156+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:19.217+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:19.278+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:19.381+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:19.454+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:19.519+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:19.579+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:19.648+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:19.708+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:19.769+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:19.828+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:19.889+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:19.950+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:20.014+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:20.082+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:20.151+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:20.235+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:20.298+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:20.362+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:20.434+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:20.498+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:20.560+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:20.622+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:20.684+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:20.744+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:20.804+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:20.864+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:20.937+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:21.000+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:21.063+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:21.122+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:21.184+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:21.248+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:58.117+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:58.141+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/providers/common/sql/hooks/sql.py:219: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  return psql.read_sql(sql, con=conn, params=parameters, **kwargs)
+
+[2023-09-04T01:47:58.214+0000] {base.py:73} INFO - Using connection ID 'postgres_con' for task execution.
+[2023-09-04T01:47:58.231+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/providers/common/sql/hooks/sql.py:219: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  return psql.read_sql(sql, con=conn, params=parameters, **kwargs)
+
+[2023-09-04T01:47:58.244+0000] {python.py:194} INFO - Done. Returned value was:       id_vac  ... column_not_exist_in_db
+0   86151883  ...                  72502
+1   86153161  ...                  72503
+2   86153161  ...                  72504
+3   86153161  ...                  72505
+4   86153161  ...                  72506
+5   86153499  ...                  72507
+6   86153499  ...                  72508
+7   86153499  ...                  72509
+8   86153499  ...                  72510
+9   86153503  ...                  72511
+10  86153503  ...                  72512
+11  86153503  ...                  72513
+12  86153503  ...                  72514
+13  86155628  ...                  72515
+14  86157698  ...                  72516
+15  86156793  ...                  72517
+16  86159432  ...                  72518
+17  86159432  ...                  72519
+18  86159432  ...                  72520
+19  86159432  ...                  72521
+20  86093212  ...                  72522
+21  86093212  ...                  72523
+22  86093212  ...                  72524
+23  86159220  ...                  72525
+24  86159609  ...                  72526
+25  86159609  ...                  72527
+26  86159609  ...                  72528
+27  86159609  ...                  72529
+28  86159609  ...                  72530
+29  86159609  ...                  72531
+30  86160162  ...                  72532
+31  86159537  ...                  72533
+32  86159537  ...                  72534
+33  86159537  ...                  72535
+34  86159537  ...                  72536
+35  86159537  ...                  72537
+36  86159537  ...                  72538
+37  86158977  ...                  72539
+38  86158977  ...                  72540
+39  86158977  ...                  72541
+40  86160013  ...                  72542
+41  86160013  ...                  72543
+42  86160013  ...                  72544
+43  86160013  ...                  72545
+44  86160013  ...                  72546
+
+[45 rows x 16 columns]
+[2023-09-04T01:47:58.352+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=dag_parser, task_id=transform, execution_date=20230904T014626, start_date=20230904T014652, end_date=20230904T014758
+[2023-09-04T01:47:58.423+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-09-04T01:47:58.465+0000] {taskinstance.py:2784} INFO - 1 downstream tasks scheduled from follow-on schedule check

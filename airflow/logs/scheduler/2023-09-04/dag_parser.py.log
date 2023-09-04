@@ -1,0 +1,77 @@
+[2023-09-04T01:45:56.084+0000] {processor.py:157} INFO - Started process (PID=32) to work on /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:45:56.089+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/dag_parser.py for tasks to queue
+[2023-09-04T01:45:56.110+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:45:56.109+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:45:57.642+0000] {processor.py:839} INFO - DAG(s) dict_keys(['dag_parser']) retrieved from /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:45:57.895+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:45:57.894+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2023-09-04T01:45:57.922+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:45:57.922+0000] {dag.py:3677} INFO - Setting next_dagrun for dag_parser to 2023-09-03T04:00:00+00:00, run_after=2023-09-04T04:00:00+00:00
+[2023-09-04T01:45:57.970+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dag_parser.py took 1.896 seconds
+[2023-09-04T01:46:28.712+0000] {processor.py:157} INFO - Started process (PID=94) to work on /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:46:28.717+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/dag_parser.py for tasks to queue
+[2023-09-04T01:46:28.722+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:46:28.722+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:46:29.127+0000] {processor.py:839} INFO - DAG(s) dict_keys(['dag_parser']) retrieved from /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:46:29.162+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:46:29.161+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2023-09-04T01:46:29.219+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:46:29.218+0000] {dag.py:3677} INFO - Setting next_dagrun for dag_parser to 2023-09-03T04:00:00+00:00, run_after=2023-09-04T04:00:00+00:00
+[2023-09-04T01:46:29.247+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dag_parser.py took 0.548 seconds
+[2023-09-04T01:46:59.936+0000] {processor.py:157} INFO - Started process (PID=151) to work on /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:46:59.939+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/dag_parser.py for tasks to queue
+[2023-09-04T01:46:59.945+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:46:59.945+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:47:00.342+0000] {processor.py:839} INFO - DAG(s) dict_keys(['dag_parser']) retrieved from /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:47:00.375+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:47:00.375+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2023-09-04T01:47:00.460+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:47:00.460+0000] {dag.py:3677} INFO - Setting next_dagrun for dag_parser to 2023-09-03T04:00:00+00:00, run_after=2023-09-04T04:00:00+00:00
+[2023-09-04T01:47:00.481+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dag_parser.py took 0.551 seconds
+[2023-09-04T01:47:31.331+0000] {processor.py:157} INFO - Started process (PID=209) to work on /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:47:31.333+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/dag_parser.py for tasks to queue
+[2023-09-04T01:47:31.336+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:47:31.336+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:47:31.690+0000] {processor.py:839} INFO - DAG(s) dict_keys(['dag_parser']) retrieved from /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:47:31.713+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:47:31.712+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2023-09-04T01:47:31.729+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:47:31.729+0000] {dag.py:3677} INFO - Setting next_dagrun for dag_parser to 2023-09-03T04:00:00+00:00, run_after=2023-09-04T04:00:00+00:00
+[2023-09-04T01:47:31.743+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dag_parser.py took 0.414 seconds
+[2023-09-04T01:48:02.067+0000] {processor.py:157} INFO - Started process (PID=265) to work on /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:48:02.072+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/dag_parser.py for tasks to queue
+[2023-09-04T01:48:02.078+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:48:02.077+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:48:02.473+0000] {processor.py:839} INFO - DAG(s) dict_keys(['dag_parser']) retrieved from /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:48:02.502+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:48:02.501+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2023-09-04T01:48:02.524+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:48:02.523+0000] {dag.py:3677} INFO - Setting next_dagrun for dag_parser to 2023-09-03T04:00:00+00:00, run_after=2023-09-04T04:00:00+00:00
+[2023-09-04T01:48:02.543+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dag_parser.py took 0.480 seconds
+[2023-09-04T01:48:33.004+0000] {processor.py:157} INFO - Started process (PID=324) to work on /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:48:33.006+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/dag_parser.py for tasks to queue
+[2023-09-04T01:48:33.010+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:48:33.009+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:48:33.342+0000] {processor.py:839} INFO - DAG(s) dict_keys(['dag_parser']) retrieved from /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:48:33.362+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:48:33.362+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2023-09-04T01:48:33.380+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:48:33.380+0000] {dag.py:3677} INFO - Setting next_dagrun for dag_parser to 2023-09-03T04:00:00+00:00, run_after=2023-09-04T04:00:00+00:00
+[2023-09-04T01:48:33.905+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dag_parser.py took 0.905 seconds
+[2023-09-04T01:49:04.412+0000] {processor.py:157} INFO - Started process (PID=383) to work on /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:49:04.414+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/dag_parser.py for tasks to queue
+[2023-09-04T01:49:04.417+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:49:04.417+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:49:04.694+0000] {processor.py:839} INFO - DAG(s) dict_keys(['dag_parser']) retrieved from /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:49:04.718+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:49:04.717+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2023-09-04T01:49:04.893+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:49:04.893+0000] {dag.py:3677} INFO - Setting next_dagrun for dag_parser to 2023-09-03T04:00:00+00:00, run_after=2023-09-04T04:00:00+00:00
+[2023-09-04T01:49:04.904+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dag_parser.py took 0.497 seconds
+[2023-09-04T01:49:34.991+0000] {processor.py:157} INFO - Started process (PID=442) to work on /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:49:34.993+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/dag_parser.py for tasks to queue
+[2023-09-04T01:49:34.996+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:49:34.995+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:49:35.264+0000] {processor.py:839} INFO - DAG(s) dict_keys(['dag_parser']) retrieved from /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:49:35.281+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:49:35.281+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2023-09-04T01:49:35.295+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:49:35.295+0000] {dag.py:3677} INFO - Setting next_dagrun for dag_parser to 2023-09-03T04:00:00+00:00, run_after=2023-09-04T04:00:00+00:00
+[2023-09-04T01:49:35.305+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dag_parser.py took 0.317 seconds
+[2023-09-04T01:50:05.347+0000] {processor.py:157} INFO - Started process (PID=500) to work on /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:50:05.350+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/dag_parser.py for tasks to queue
+[2023-09-04T01:50:05.352+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:50:05.352+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:50:05.568+0000] {processor.py:839} INFO - DAG(s) dict_keys(['dag_parser']) retrieved from /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:50:05.590+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:50:05.590+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2023-09-04T01:50:05.749+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:50:05.748+0000] {dag.py:3677} INFO - Setting next_dagrun for dag_parser to 2023-09-03T04:00:00+00:00, run_after=2023-09-04T04:00:00+00:00
+[2023-09-04T01:50:05.759+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dag_parser.py took 0.415 seconds
+[2023-09-04T01:50:35.926+0000] {processor.py:157} INFO - Started process (PID=556) to work on /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:50:35.928+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/dag_parser.py for tasks to queue
+[2023-09-04T01:50:35.930+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:50:35.930+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:50:36.185+0000] {processor.py:839} INFO - DAG(s) dict_keys(['dag_parser']) retrieved from /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:50:36.335+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:50:36.335+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2023-09-04T01:50:36.350+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:50:36.350+0000] {dag.py:3677} INFO - Setting next_dagrun for dag_parser to 2023-09-03T04:00:00+00:00, run_after=2023-09-04T04:00:00+00:00
+[2023-09-04T01:50:36.361+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dag_parser.py took 0.438 seconds
+[2023-09-04T01:51:06.556+0000] {processor.py:157} INFO - Started process (PID=614) to work on /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:51:06.558+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/dag_parser.py for tasks to queue
+[2023-09-04T01:51:06.560+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:51:06.560+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:51:06.922+0000] {processor.py:839} INFO - DAG(s) dict_keys(['dag_parser']) retrieved from /opt/airflow/dags/dag_parser.py
+[2023-09-04T01:51:06.943+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:51:06.942+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2023-09-04T01:51:06.958+0000] {logging_mixin.py:151} INFO - [2023-09-04T01:51:06.958+0000] {dag.py:3677} INFO - Setting next_dagrun for dag_parser to 2023-09-03T04:00:00+00:00, run_after=2023-09-04T04:00:00+00:00
+[2023-09-04T01:51:06.970+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dag_parser.py took 0.416 seconds
