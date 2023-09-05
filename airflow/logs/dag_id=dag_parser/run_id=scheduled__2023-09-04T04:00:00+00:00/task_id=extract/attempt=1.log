@@ -1,0 +1,26 @@
+[2023-09-05T09:44:07.601+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_parser.extract scheduled__2023-09-04T04:00:00+00:00 [queued]>
+[2023-09-05T09:44:07.652+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_parser.extract scheduled__2023-09-04T04:00:00+00:00 [queued]>
+[2023-09-05T09:44:07.664+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 3
+[2023-09-05T09:44:07.684+0000] {taskinstance.py:1382} INFO - Executing <Task(_PythonDecoratedOperator): extract> on 2023-09-04 04:00:00+00:00
+[2023-09-05T09:44:07.731+0000] {standard_task_runner.py:57} INFO - Started process 51 to run task
+[2023-09-05T09:44:07.742+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'dag_parser', 'extract', 'scheduled__2023-09-04T04:00:00+00:00', '--job-id', '221', '--raw', '--subdir', 'DAGS_FOLDER/dag_parser.py', '--cfg-path', '/tmp/tmph4geq699']
+[2023-09-05T09:44:07.746+0000] {standard_task_runner.py:85} INFO - Job 221: Subtask extract
+[2023-09-05T09:44:07.812+0000] {task_command.py:415} INFO - Running <TaskInstance: dag_parser.extract scheduled__2023-09-04T04:00:00+00:00 [running]> on host feadf84b2b4b
+[2023-09-05T09:44:07.925+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='oleg' AIRFLOW_CTX_DAG_ID='dag_parser' AIRFLOW_CTX_TASK_ID='extract' AIRFLOW_CTX_EXECUTION_DATE='2023-09-04T04:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-04T04:00:00+00:00'
+[2023-09-05T09:44:44.020+0000] {python.py:194} INFO - Done. Returned value was:             id  premium  ... is_adv_vacancy                            branding
+0     86124567    False  ...          False                                 NaN
+1     85043263    False  ...          False  {'type': 'MAKEUP', 'tariff': None}
+2     86122515    False  ...          False                                 NaN
+3     86210281    False  ...          False                                 NaN
+4     86213345    False  ...          False                                 NaN
+...        ...      ...  ...            ...                                 ...
+1043  82148019    False  ...          False                                 NaN
+1044  86232584    False  ...          False                                 NaN
+1045  76903934    False  ...          False                                 NaN
+1046  86234800    False  ...          False  {'type': 'MAKEUP', 'tariff': None}
+1047  85675155    False  ...          False                                 NaN
+
+[1048 rows x 36 columns]
+[2023-09-05T09:44:44.323+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=dag_parser, task_id=extract, execution_date=20230904T040000, start_date=20230905T094407, end_date=20230905T094444
+[2023-09-05T09:44:44.407+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-09-05T09:44:44.455+0000] {taskinstance.py:2784} INFO - 1 downstream tasks scheduled from follow-on schedule check

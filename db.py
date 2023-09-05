@@ -48,8 +48,8 @@ class Skills(Base):
     skill_type: Mapped[str] = mapped_column(String)
 
 
-#postgresql://admin:admin@localhost:5432/analytics_hh
-engine = create_engine("postgresql+psycopg2://airflow:airflow@postgres/airflow")
+
+engine = create_engine("postgresql://admin:admin@localhost:5432/analytics_hh")
 if not database_exists(engine.url):
     create_database(engine.url)
     
