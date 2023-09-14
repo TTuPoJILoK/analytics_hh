@@ -1,0 +1,52 @@
+[2023-09-14T10:20:45.216+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_parser.extract scheduled__2023-09-13T04:00:00+00:00 [queued]>
+[2023-09-14T10:20:45.229+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_parser.extract scheduled__2023-09-13T04:00:00+00:00 [queued]>
+[2023-09-14T10:20:45.229+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 3
+[2023-09-14T10:20:45.247+0000] {taskinstance.py:1382} INFO - Executing <Task(_PythonDecoratedOperator): extract> on 2023-09-13 04:00:00+00:00
+[2023-09-14T10:20:45.255+0000] {standard_task_runner.py:57} INFO - Started process 92 to run task
+[2023-09-14T10:20:45.260+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'dag_parser', 'extract', 'scheduled__2023-09-13T04:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/dag_parser.py', '--cfg-path', '/tmp/tmpu4wzyu7i']
+[2023-09-14T10:20:45.261+0000] {standard_task_runner.py:85} INFO - Job 3: Subtask extract
+[2023-09-14T10:20:45.325+0000] {task_command.py:415} INFO - Running <TaskInstance: dag_parser.extract scheduled__2023-09-13T04:00:00+00:00 [running]> on host 37061a0298c8
+[2023-09-14T10:20:45.422+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='oleg' AIRFLOW_CTX_DAG_ID='dag_parser' AIRFLOW_CTX_TASK_ID='extract' AIRFLOW_CTX_EXECUTION_DATE='2023-09-13T04:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-13T04:00:00+00:00'
+[2023-09-14T10:21:09.398+0000] {python.py:194} INFO - Done. Returned value was:            id  premium  ... is_adv_vacancy branding
+0    86124567    False  ...          False      NaN
+1    86688293    False  ...          False      NaN
+2    83140588    False  ...          False      NaN
+3    86688486    False  ...          False      NaN
+4    86672365    False  ...          False      NaN
+..        ...      ...  ...            ...      ...
+776  80823068    False  ...          False      NaN
+777  85609681    False  ...          False      NaN
+778  85395029    False  ...          False      NaN
+779  85675155    False  ...          False      NaN
+780  86693173    False  ...          False      NaN
+
+[781 rows x 36 columns]
+[2023-09-14T10:21:09.679+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=dag_parser, task_id=extract, execution_date=20230913T040000, start_date=20230914T102045, end_date=20230914T102109
+[2023-09-14T10:21:09.726+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-09-14T10:21:09.759+0000] {taskinstance.py:2784} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-09-14T10:27:28.168+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_parser.extract scheduled__2023-09-13T04:00:00+00:00 [queued]>
+[2023-09-14T10:27:28.186+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_parser.extract scheduled__2023-09-13T04:00:00+00:00 [queued]>
+[2023-09-14T10:27:28.186+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 3
+[2023-09-14T10:27:28.202+0000] {taskinstance.py:1382} INFO - Executing <Task(_PythonDecoratedOperator): extract> on 2023-09-13 04:00:00+00:00
+[2023-09-14T10:27:28.210+0000] {standard_task_runner.py:57} INFO - Started process 228 to run task
+[2023-09-14T10:27:28.213+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'dag_parser', 'extract', 'scheduled__2023-09-13T04:00:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/dag_parser.py', '--cfg-path', '/tmp/tmph34xvwgm']
+[2023-09-14T10:27:28.214+0000] {standard_task_runner.py:85} INFO - Job 8: Subtask extract
+[2023-09-14T10:27:28.265+0000] {task_command.py:415} INFO - Running <TaskInstance: dag_parser.extract scheduled__2023-09-13T04:00:00+00:00 [running]> on host 37061a0298c8
+[2023-09-14T10:27:28.347+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='oleg' AIRFLOW_CTX_DAG_ID='dag_parser' AIRFLOW_CTX_TASK_ID='extract' AIRFLOW_CTX_EXECUTION_DATE='2023-09-13T04:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-13T04:00:00+00:00'
+[2023-09-14T10:27:52.093+0000] {python.py:194} INFO - Done. Returned value was:            id  premium  ... is_adv_vacancy branding
+0    86124567    False  ...          False      NaN
+1    86688293    False  ...          False      NaN
+2    83140588    False  ...          False      NaN
+3    86688486    False  ...          False      NaN
+4    85669024    False  ...          False      NaN
+..        ...      ...  ...            ...      ...
+774  80823068    False  ...          False      NaN
+775  85609681    False  ...          False      NaN
+776  85395029    False  ...          False      NaN
+777  85675155    False  ...          False      NaN
+778  86693173    False  ...          False      NaN
+
+[779 rows x 36 columns]
+[2023-09-14T10:27:52.312+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=dag_parser, task_id=extract, execution_date=20230913T040000, start_date=20230914T102728, end_date=20230914T102752
+[2023-09-14T10:27:52.341+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-09-14T10:27:52.371+0000] {taskinstance.py:2784} INFO - 1 downstream tasks scheduled from follow-on schedule check
