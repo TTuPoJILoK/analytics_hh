@@ -1,3 +1,5 @@
 venv/
 .env
 .DS_Store
+letsencrypt/
+**/__pycache__

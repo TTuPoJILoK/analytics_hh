@@ -10,4 +10,8 @@ font = "sans serif"
 # if you don't want to start the default browser:
 headless = true
 # you will need this for local development:
-runOnSave = true
+#runOnSave = true
+
+enableCORS = false
+
+enableXsrfProtection = false
