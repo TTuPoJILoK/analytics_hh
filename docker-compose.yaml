@@ -306,15 +306,6 @@ services:
     depends_on:
       - app_db
 
-#  nginx:
- #   image: nginx:1.25-alpine
-  #  depends_on:
-   #   - app
-    #ports:
-     # - "80:80"
-    #volumes:
-     # - ./app:/var/www/html
-      #- './docker/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf'
   nginx:
     image: 'jc21/nginx-proxy-manager:latest'
     restart: unless-stopped
@@ -328,7 +319,7 @@ services:
     volumes:
       - ./data:/data
       - ./letsencrypt:/etc/letsencrypt
-      - './nginx/1.conf:/data/nginx/proxy_host/1.conf'
+      - './data/nginx/proxy_host/1.conf:/data/nginx/proxy_host/1.conf'
 
 
   app_db:
