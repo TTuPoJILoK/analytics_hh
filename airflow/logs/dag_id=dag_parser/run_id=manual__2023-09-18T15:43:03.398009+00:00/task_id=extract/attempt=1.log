@@ -1,0 +1,26 @@
+[2023-09-18T15:43:05.960+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_parser.extract manual__2023-09-18T15:43:03.398009+00:00 [queued]>
+[2023-09-18T15:43:05.967+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_parser.extract manual__2023-09-18T15:43:03.398009+00:00 [queued]>
+[2023-09-18T15:43:05.968+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 3
+[2023-09-18T15:43:05.976+0000] {taskinstance.py:1382} INFO - Executing <Task(_PythonDecoratedOperator): extract> on 2023-09-18 15:43:03.398009+00:00
+[2023-09-18T15:43:05.985+0000] {standard_task_runner.py:57} INFO - Started process 98 to run task
+[2023-09-18T15:43:05.994+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'dag_parser', 'extract', 'manual__2023-09-18T15:43:03.398009+00:00', '--job-id', '236', '--raw', '--subdir', 'DAGS_FOLDER/dag_parser.py', '--cfg-path', '/tmp/tmpj00jrk35']
+[2023-09-18T15:43:06.002+0000] {standard_task_runner.py:85} INFO - Job 236: Subtask extract
+[2023-09-18T15:43:06.126+0000] {task_command.py:415} INFO - Running <TaskInstance: dag_parser.extract manual__2023-09-18T15:43:03.398009+00:00 [running]> on host fea5fe0d40df
+[2023-09-18T15:43:06.274+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='oleg' AIRFLOW_CTX_DAG_ID='dag_parser' AIRFLOW_CTX_TASK_ID='extract' AIRFLOW_CTX_EXECUTION_DATE='2023-09-18T15:43:03.398009+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-09-18T15:43:03.398009+00:00'
+[2023-09-18T15:43:53.957+0000] {python.py:194} INFO - Done. Returned value was:             id  premium  ... immediate_redirect_url immediate_redirect_vacancy_id
+0     86566923    False  ...                    NaN                           NaN
+1     81303213    False  ...                    NaN                           NaN
+2     86289963    False  ...                    NaN                           NaN
+3     86472875    False  ...                    NaN                           NaN
+4     86472613    False  ...                    NaN                           NaN
+...        ...      ...  ...                    ...                           ...
+1331  85655158    False  ...                    NaN                           NaN
+1332  86086863    False  ...                    NaN                           NaN
+1333  85230757    False  ...                    NaN                           NaN
+1334  85230761    False  ...                    NaN                           NaN
+1335  85230760    False  ...                    NaN                           NaN
+
+[1336 rows x 38 columns]
+[2023-09-18T15:43:54.285+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=dag_parser, task_id=extract, execution_date=20230918T154303, start_date=20230918T154305, end_date=20230918T154354
+[2023-09-18T15:43:54.314+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-09-18T15:43:54.369+0000] {taskinstance.py:2784} INFO - 1 downstream tasks scheduled from follow-on schedule check

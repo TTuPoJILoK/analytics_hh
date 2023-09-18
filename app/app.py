@@ -49,7 +49,7 @@ cur.execute( '''
             employment, 
             role, 
             skill, 
-            skill_lower,
+            skill_right_name,
             skill_type,
             grade
     FROM vacancies
@@ -161,7 +161,7 @@ try:
     skill_type.sort()
     skill_type.insert(0, 'Все')
 
-    employment_dict = {'full': 'Полная', 'part': 'Частичная', 'project': ' Проект', 'probation': 'Испытательный срок'}
+    employment_dict = {'full': 'Полная', 'part': 'Частичная', 'project': ' Проект', 'probation': 'Стажировка'}
     vacs['employment_rus'] = vacs['employment'].apply(lambda x: employment_dict[x])
 
     employment_types = vacs['employment_rus'].unique().tolist()
@@ -189,11 +189,11 @@ try:
     if num_results == 'Топ 10':
         colormap = n_colors('rgb(250, 235, 215)', 'rgb(189, 147, 255)', 10, colortype = 'rgb')
         mask = selection['skill_type'].isin(skill_selection)
-        gr = selection[mask].groupby(by=['skill_lower'], as_index=False)['id_vac'].count().sort_values(by='id_vac', ascending=False)[:10]
+        gr = selection[mask].groupby(by=['skill_right_name'], as_index=False)['id_vac'].count().sort_values(by='id_vac', ascending=False)[:10]
         bar_chart_skills = px.bar(gr, 
                         x='id_vac',
-                        y='skill_lower',
-                        color='skill_lower',
+                        y='skill_right_name',
+                        color='skill_right_name',
                         orientation='h',
                         color_discrete_sequence=colormap,
                         text_auto=True,
@@ -205,11 +205,11 @@ try:
     else:
         colormap = n_colors('rgb(250, 235, 215)', 'rgb(189, 147, 255)', 20, colortype = 'rgb')
         mask = selection['skill_type'].isin(skill_selection)
-        gr = selection[mask].groupby(by=['skill_lower'], as_index=False)['id_vac'].count().sort_values(by='id_vac', ascending=False)[:20]
+        gr = selection[mask].groupby(by=['skill_right_name'], as_index=False)['id_vac'].count().sort_values(by='id_vac', ascending=False)[:20]
         bar_chart_skills = px.bar(gr, 
                         x='id_vac',
-                        y='skill_lower',
-                        color='skill_lower',
+                        y='skill_right_name',
+                        color='skill_right_name',
                         orientation='h',
                         color_discrete_sequence=colormap,
                         text_auto=True,

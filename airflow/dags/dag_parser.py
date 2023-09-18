@@ -97,7 +97,7 @@ def dag_parser():
 
         # Парсим частями по четверти дня
         for _ in range(num_parsing_days * 4 - 1):
-            day_to += timedelta(days=1/4)
+            day_to += timedelta(days=1/10)
             for page in range(0, 20):
                 
                 # Преобразуем текст ответа запроса в словарь Python
@@ -113,7 +113,7 @@ def dag_parser():
                 # Необязательная задержка, но чтобы не нагружать сервисы hh
                 time.sleep(3)
                 
-            day_from += timedelta(days=1/4)
+            day_from += timedelta(days=1/10)
 
         jobs = pd.DataFrame(jsobjs)
         return jobs
@@ -206,12 +206,15 @@ def dag_parser():
         hook = PostgresHook(postgres_conn_id="postgres_con")
         skills = hook.get_pandas_df(sql="select * from skill_types;")
 
+        skills = skills[['skill_lower', 'skill_type', 'skill_right_name']]
         jobs_res['skill_lower'] = jobs_res['skill'].apply(str.lower)
         jobs_res = jobs_res.merge(skills, on='skill_lower', how='left')
         jobs_res = jobs_res.rename(columns={'id': 'id_vac', 'type': 'type_vac'})
         jobs_res = jobs_res[['id_vac', 'published_at', 'name', 'city', 'salary', 'employer', 'type_vac', 'experience', 
-                            'employment', 'role', 'description', 'skill', 'grade', 'skill_lower', 'skill_type']]
+                         'employment', 'role', 'description', 'skill', 'grade', 'skill_lower', 'skill_type',
+                    'skill_right_name']]
         jobs_res['skill_type'] = jobs_res['skill_type'].fillna('0')
+        jobs_res['skill_right_name'] = jobs_res['skill_right_name'].fillna('0')
 
         #  Добавляем в таблицу primary key
         max_id_df = hook.get_pandas_df(sql="SELECT MAX(column_not_exist_in_db) as max FROM vacancies;")
