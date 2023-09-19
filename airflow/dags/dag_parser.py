@@ -97,7 +97,7 @@ def dag_parser():
 
         # Парсим частями по четверти дня
         for _ in range(num_parsing_days * 4 - 1):
-            day_to += timedelta(days=1/10)
+            day_to += timedelta(days=1/4)
             for page in range(0, 20):
                 
                 # Преобразуем текст ответа запроса в словарь Python
@@ -113,7 +113,7 @@ def dag_parser():
                 # Необязательная задержка, но чтобы не нагружать сервисы hh
                 time.sleep(3)
                 
-            day_from += timedelta(days=1/10)
+            day_from += timedelta(days=1/4)
 
         jobs = pd.DataFrame(jsobjs)
         return jobs
@@ -204,7 +204,7 @@ def dag_parser():
 
         # Из таблицы skill_types добавляем типы навыков
         hook = PostgresHook(postgres_conn_id="postgres_con")
-        skills = hook.get_pandas_df(sql="select * from skill_types;")
+        skills = hook.get_pandas_df(sql="select * from skills;")
 
         skills = skills[['skill_lower', 'skill_type', 'skill_right_name']]
         jobs_res['skill_lower'] = jobs_res['skill'].apply(str.lower)

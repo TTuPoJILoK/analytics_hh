@@ -59,3 +59,10 @@
 2023/09/16 05:56:48 [alert] 223#223: 512 worker_connections are not enough
 2023/09/16 05:56:48 [error] 224#224: *1054 recv() failed (104: Connection reset by peer) while reading response header from upstream, client: 127.0.0.1, server: localhost-nginx-proxy-manager, request: "GET /favicon.ico HTTP/1.1", upstream: "http://127.0.0.1:80/favicon.ico", host: "94.180.116.9"
 2023/09/16 05:58:45 [error] 223#223: *1074 open() "/var/www/html/actuator/gateway/routes" failed (2: No such file or directory), client: 83.97.73.87, server: localhost-nginx-proxy-manager, request: "GET /actuator/gateway/routes HTTP/1.1", host: "94.180.116.9:80"
+2023/09/19 11:32:05 [warn] 147#147: could not build optimal proxy_headers_hash, you should increase either proxy_headers_hash_max_size: 512 or proxy_headers_hash_bucket_size: 64; ignoring proxy_headers_hash_bucket_size
+2023/09/19 11:59:19 [alert] 176#176: *6 open socket #25 left in connection 10
+2023/09/19 11:59:19 [alert] 176#176: *7 open socket #26 left in connection 11
+2023/09/19 11:59:19 [alert] 176#176: aborting
+2023/09/19 11:59:47 [error] 176#176: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.0.5, server: nginxproxymanager, request: "GET /api/ HTTP/1.1", upstream: "http://127.0.0.1:3000/", host: "192.168.0.2:81", referrer: "http://192.168.0.2:81/nginx/certificates"
+2023/09/19 11:59:51 [warn] 147#147: could not build optimal proxy_headers_hash, you should increase either proxy_headers_hash_max_size: 512 or proxy_headers_hash_bucket_size: 64; ignoring proxy_headers_hash_bucket_size
+2023/09/19 12:06:57 [warn] 140#140: could not build optimal proxy_headers_hash, you should increase either proxy_headers_hash_max_size: 512 or proxy_headers_hash_bucket_size: 64; ignoring proxy_headers_hash_bucket_size
