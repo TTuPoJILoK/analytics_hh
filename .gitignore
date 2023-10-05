@@ -7,5 +7,5 @@ __pycache__/
 airflow/config/
 airflow/dags/__pycache__/
 data/keys.json
-airflow/logs
+airflow/logs/
 
