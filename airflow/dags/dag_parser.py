@@ -9,6 +9,7 @@ from sqlalchemy import create_engine
 from airflow.decorators import dag, task
 from airflow.providers.postgres.hooks.postgres import PostgresHook
 import pendulum
+from airflow.hooks.base import BaseHook
 
 
 local_tz = pendulum.timezone("Asia/Krasnoyarsk")
@@ -225,7 +226,8 @@ def dag_parser():
     @task
     def load(jobs_res):
         # Складываем результат в Postgres
-        engine = create_engine("postgresql://admin:admin@app_db:5432/analytics_hh")
+        connec = BaseHook.get_connection('postgres_con')
+        engine = create_engine(f'postgresql://{connec.login}:{connec.password}@{connec.host}:{connec.port}/{connec.schema}')
         jobs_res.to_sql('vacancies', engine, if_exists='append', index=False)
 
     jobs = extract()

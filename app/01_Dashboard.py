@@ -2,17 +2,20 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 import psycopg2
-from datetime import date, timedelta, datetime
-import numpy as np
+from datetime import timedelta
 from plotly.colors import n_colors
+import os
+from dotenv import load_dotenv
+
 
 # Выгружаем данные
+load_dotenv()
 conn = psycopg2.connect(
     host="app_db", 
     port="5432",
-    database="analytics_hh",
-    user="admin",
-    password="admin"
+    database=os.getenv('POSTGRES_DB'),
+    user=os.getenv('POSTGRES_USER'),
+    password=os.getenv('POSTGRES_PASSWORD')
 )
 cur = conn.cursor()
 cur.execute( '''
@@ -30,7 +33,7 @@ cur.execute( '''
             skill_right_name,
             skill_type,
             grade
-    FROM vacancies
+    FROM "vacancies"
 ''')     
 vacs = pd.DataFrame(cur.fetchall())
 vacs.columns=[ x.name for x in cur.description]

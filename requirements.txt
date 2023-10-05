@@ -157,6 +157,7 @@ pyodbc==4.0.39
 pyproject_hooks==1.0.0
 python-daemon==3.0.1
 python-dateutil==2.8.2
+python-dotenv==1.0.0
 python-nvd3==0.15.0
 python-slugify==8.0.1
 pytz==2023.3

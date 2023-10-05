@@ -1,6 +1,11 @@
 venv/
 .env
 .DS_Store
-letsencrypt/
-**/__pycache__
+__pycache__/
 /logs/
+.vscode/
+airflow/config/
+airflow/dags/__pycache__/
+data/keys.json
+airflow/logs
+

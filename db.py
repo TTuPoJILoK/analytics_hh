@@ -1,6 +1,5 @@
 from datetime import datetime
 import datetime
-
 import pytz as pytz
 from sqlalchemy import create_engine
 from sqlalchemy import String, FLOAT, DateTime, Integer
@@ -8,6 +7,8 @@ from sqlalchemy.orm import DeclarativeBase, Session
 from sqlalchemy.orm import Mapped
 from sqlalchemy.orm import mapped_column
 from sqlalchemy_utils import database_exists, create_database
+import os
+from dotenv import load_dotenv
 
 
 class Base(DeclarativeBase):
@@ -46,7 +47,8 @@ class Skills(Base):
     skill_right_name: Mapped[str] = mapped_column(String)
 
 
-engine = create_engine("postgresql://admin:admin@localhost:5432/analytics_hh")
+load_dotenv()
+engine = create_engine(os.getenv('POSTGRES_URL_LOCALHOST'))
 if not database_exists(engine.url):
     create_database(engine.url)
     

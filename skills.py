@@ -1,15 +1,18 @@
 import pandas as pd
 from sqlalchemy import create_engine
 import psycopg2
+import os
+from dotenv import load_dotenv
 
 
+load_dotenv()
 conn = psycopg2.connect(
-        host="localhost",
-        port="5432",
-        database="analytics_hh",
-        user="admin",
-        password="admin"
-        )
+    host="app_db", 
+    port="5432",
+    database=os.getenv('POSTGRES_DB'),
+    user=os.getenv('POSTGRES_USER'),
+    password=os.getenv('POSTGRES_PASSWORD')
+)
 cur = conn.cursor()
 
 q = "select id_vac, skill from vacancies"
@@ -177,5 +180,5 @@ conn.commit()
 cur.close()
 conn.close()
 
-engine = create_engine("postgresql://admin:admin@localhost:5432/analytics_hh")
+engine = create_engine(os.getenv('POSTGRES_URL'))
 skills_itog.to_sql("skills", engine, if_exists="append", index=False)
