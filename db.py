@@ -14,7 +14,7 @@ from dotenv import load_dotenv
 class Base(DeclarativeBase):
     pass
 
-# Создание таблиц и базы данных на сервере
+# Создаем таблицу для вакансий
 class Vacancy(Base):
     __tablename__ = "vacancies"
 
@@ -37,7 +37,7 @@ class Vacancy(Base):
     skill_right_name: Mapped[str] = mapped_column(String)
 
 
-
+# Создаем таблицу для навыков
 class Skills(Base):
     __tablename__ = "skills"
 
@@ -46,7 +46,7 @@ class Skills(Base):
     skill_type: Mapped[str] = mapped_column(String)
     skill_right_name: Mapped[str] = mapped_column(String)
 
-
+# Создаем базу данных
 load_dotenv()
 engine = create_engine(os.getenv('POSTGRES_URL_LOCALHOST'))
 if not database_exists(engine.url):

@@ -5,6 +5,7 @@ import os
 from dotenv import load_dotenv
 
 
+# Загружаем данные о навыках
 load_dotenv()
 conn = psycopg2.connect(
     host="app_db", 
@@ -23,13 +24,14 @@ skills.columns=[x.name for x in cur.description]
 conn.commit()
 cur.close()
 
-
+# Все навыки переводим в нижний регистр и группируем, считая количество
 gr = skills.groupby('skill')['id_vac'].count().sort_values(ascending=False)
 skills_group = pd.DataFrame(gr)
 skills_group = skills_group.reset_index()
 skills_group['skill_lower'] = skills_group['skill'].apply(str.lower)
 skills_group = skills_group.groupby(['skill_lower']).sum().sort_values('id_vac', ascending=False).reset_index()
 
+# Самые популярные языки программирования, инструменты, библиотеки и бд, которые будут использоваться в анализе
 keywords_programming = [
 'sql', 'python', 'r', 'c', 'c#', 'javascript', 'js',  'java', 'scala', 'sas', 'matlab', 
 'c++', 'c/c++', 'perl', 'go', 'typescript', 'bash', 'html', 'css', 'php', 'powershell', 'rust', 
@@ -45,7 +47,7 @@ keywords_programming = [
 ]
 
 keywords_libraries = [
-'scikit-learn', 'jupyter', 'theano', 'openCV', 'spark', 'nltk', 'mlpack', 'chainer', 'fann', 'shogun', 
+'scikit-learn', 'jupyter', 'theano', 'opencv', 'spark', 'nltk', 'mlpack', 'chainer', 'fann', 'shogun', 
 'dlib', 'mxnet', 'node.js', 'vue', 'vue.js', 'keras', 'ember.js', 'jse/jee', 'seaborn', 'pandas', 'selenium',
 'matplotlib', 'dplyr', 'tidyr', 'ggplot2', 'plotly', 'numpy', 'hadoop', 'airflow', 'tensorflow', 'pyspark', 'pytorch',
     
@@ -79,6 +81,7 @@ skills_group['lib_skills'] = skills_group['skill_lower'].isin(keywords_libraries
 skills_group['tool_skills'] = skills_group['skill_lower'].isin(keywords_analyst_tools)
 skills_group['db_skills'] = skills_group['skill_lower'].isin(keywords_db)
 
+# Добовляем типы навыков
 skills_group.loc[skills_group['prog_skills'] == True, 'type'] = 'Языки программирования'
 skills_group.loc[skills_group['lib_skills'] == True, 'type'] = 'Библиотеки'
 skills_group.loc[skills_group['tool_skills'] == True, 'type'] = 'Инструменты'
@@ -88,6 +91,7 @@ skills_group['type'] = skills_group['type'].fillna('0')
 skills_group = skills_group[['skill_lower', 'id_vac', 'type']]
 skills_group = skills_group.rename(columns={'id_vac': 'count', 'type': 'skill_type'})
 
+# Возвращаем все названия для каждого инструмена, ЯП, библиотеки и БД
 keywords_programming_fullnames = {
     'sql' : 'SQL', 'python' : 'Python', 'r' : 'R', 'c':'C', 'c#':'C#', 'javascript' : 'JavaScript', 'js':'JS',
     'java':'Java', 
@@ -179,6 +183,6 @@ cur.execute( '''
 conn.commit()
 cur.close()
 conn.close()
-
+# Загружаем данные
 engine = create_engine(os.getenv('POSTGRES_URL'))
 skills_itog.to_sql("skills", engine, if_exists="append", index=False)

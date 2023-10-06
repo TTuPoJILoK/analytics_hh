@@ -109,7 +109,7 @@ selection = vacs2.query(
 )
 
 try:
-    # Строим KPI
+    # Строим KPIs
     num_vacs = selection['id_vac'].nunique()
     avg_salary = round(selection[selection['salary'] != 0]['salary'].mean())
 

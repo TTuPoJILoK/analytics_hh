@@ -22,12 +22,12 @@ default_args = {
     'start_date': datetime(2023, 8, 29, tzinfo=local_tz)
 }
 
-shedule_interval = '0 11 * * *'
+shedule_interval = '0 17 * * *'
 
 # Функция для получения страницы с вакансиями
 def getPage(day_from, day_to, page=0):
 
-        # Справочник для параметров GET-запроса
+    # Справочник для параметров GET-запроса
     params = {
         'text': "NAME:Аналитик",  # Вакансии по запросу "Аналитик"
         'area': 113,              # Россия
@@ -46,7 +46,7 @@ def getPage(day_from, day_to, page=0):
         except:
             time.sleep(5)
             continue
-    # Декодируем его ответ, чтобы Кириллица отображалась корректно
+    # Декодируем ответ, чтобы кириллица отображалась корректно
     data = req.content.decode()
     req.close()
     return data
@@ -73,7 +73,7 @@ def get_skills(vac):
         description = '0'
     return skills, description
 
- # Проверка вакансии на то, что она уже была в базе данных
+ # Проверка вакансии на то, что она уже есть в базе данных
 def test_include(vac_id):
     hook = PostgresHook(postgres_conn_id="postgres_con")
     df = hook.get_pandas_df(sql="select distinct id_vac from vacancies;")
@@ -111,7 +111,7 @@ def dag_parser():
                 if (jsObj['pages'] - page) <= 1:
                     break
                 
-                # Необязательная задержка, но чтобы не нагружать сервисы hh
+                # задержка, чтобы не нагружать сервисы hh
                 time.sleep(3)
                 
             day_from += timedelta(days=1/4)
@@ -132,6 +132,7 @@ def dag_parser():
         jobs['role'] = jobs['roles'].apply(lambda x: x[0])
         jobs = jobs[['id', 'published_at', 'name', 'city', 'salary', 'employer', 'type', 'experience', 'employment', 'role']]
 
+        # Преобразовываем зарплаты с учетом валюты и налогов
         currencies = {}
         dictionaries = requests.get('https://api.hh.ru/dictionaries').json()
         for currency in dictionaries['currency']:
@@ -160,6 +161,7 @@ def dag_parser():
                     'type', 'experience', 'employment', 'role']]
         jobs = jobs.rename(columns={'itog': 'salary'})
 
+        # Оставляем только вакансии, в которых роль аналитик
         roles = ['Системный аналитик', 'Продуктовый аналитик', 'BI-аналитик, аналитик данных', 'Бизнес-аналитик', 
                 'Аналитик', 'Руководитель отдела аналитики', 'Финансовый аналитик, инвестиционный аналитик']
         jobs = jobs[jobs['role'].isin(roles)]
@@ -217,7 +219,7 @@ def dag_parser():
         jobs_res['skill_type'] = jobs_res['skill_type'].fillna('0')
         jobs_res['skill_right_name'] = jobs_res['skill_right_name'].fillna('0')
 
-        #  Добавляем в таблицу primary key
+        # Добавляем в таблицу primary key
         max_id_df = hook.get_pandas_df(sql="SELECT MAX(column_not_exist_in_db) as max FROM vacancies;")
         max_id = max_id_df['max'][0] + 1
         jobs_res['column_not_exist_in_db'] = range(max_id, max_id+len(jobs_res))
