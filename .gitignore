@@ -6,7 +6,6 @@ __pycache__/
 .vscode/
 airflow/config/
 airflow/dags/__pycache__/
-data/keys.json
+data/
 airflow/logs/
-data/logs/
 letsencrypt/
