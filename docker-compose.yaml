@@ -259,7 +259,7 @@ services:
     volumes:
       - ./data:/data
       - ./letsencrypt:/etc/letsencrypt
-    #  - './data/nginx/proxy_host/1.conf:/data/nginx/proxy_host/1.conf'
+      - './data/nginx/proxy_host/1.conf:/data/nginx/proxy_host/1.conf'
 
 
   app_db:
