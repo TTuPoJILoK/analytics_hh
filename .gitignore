@@ -6,6 +6,11 @@ __pycache__/
 .vscode/
 airflow/config/
 airflow/dags/__pycache__/
-data/
 airflow/logs/
 letsencrypt/
+data/*
+!data/nginx
+data/nginx/*
+!data/nginx/proxy_host
+data/nginx/proxy_host/*
+!data/nginx/proxy_host/1.conf
