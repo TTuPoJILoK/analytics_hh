@@ -8,7 +8,7 @@
 
 #### Или в фортмате скриншота:
 
-![last_day](pics/screen.png)
+![last_day](pics/screen2.png)
 
 ---
 
